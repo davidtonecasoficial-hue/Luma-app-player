@@ -1,0 +1,6 @@
+{
+  "name": "Luma Player",
+  "description": "Offline-first Liquid Glass music and video player with multi-language support and local library synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

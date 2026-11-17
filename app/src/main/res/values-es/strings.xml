@@ -1,0 +1,253 @@
+<resources>
+    <string name="app_name">Luma Player</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_library">Biblioteca</string>
+    <string name="nav_history">Historial</string>
+    <string name="nav_settings">Perfil</string>
+
+    <!-- Greetings -->
+    <string name="greeting_morning">Buenos días</string>
+    <string name="greeting_afternoon">Buenas tardes</string>
+    <string name="greeting_evening">Buenas noches</string>
+    <string name="greeting_subtitle">Tu estudio multimedia Liquid Glass sin conexión</string>
+
+    <!-- Home -->
+    <string name="home_search_hint">Buscar canciones, artistas, vídeos…</string>
+    <string name="home_featured_label">Seguir escuchando</string>
+    <string name="home_smart_mix">Smart Mix</string>
+    <string name="home_smart_mix_subtitle">Mezcla local creada con los metadatos de tu biblioteca</string>
+    <string name="home_mood_collections">Colecciones de Ambiente</string>
+    <string name="home_shortcuts">Accesos Rápidos</string>
+    <string name="home_recently_played">Reproducido recientemente</string>
+    <string name="home_favorites">Favoritos</string>
+    <string name="home_recently_added">Añadido recientemente</string>
+    <string name="home_see_all">Ver todo</string>
+    <string name="home_empty_title">Tu biblioteca offline está lista</string>
+    <string name="home_empty_body">Importa archivos locales de audio o vídeo, o vincula una carpeta para sincronizar sin Internet.</string>
+    <string name="action_import_files">Importar Audio / Vídeo</string>
+    <string name="action_import_folder">Sincronizar Carpeta</string>
+    <string name="action_pick_video">Importar de Galería</string>
+    <string name="action_sync_now">Sincronizar Offline</string>
+
+    <!-- Moods -->
+    <string name="mood_chill">Chill</string>
+    <string name="mood_focus">Concentración</string>
+    <string name="mood_workout">Entreno</string>
+    <string name="mood_road_trip">Viaje</string>
+    <string name="mood_none">Sin ambiente</string>
+
+    <!-- Shortcuts / Library Tabs -->
+    <string name="tab_songs">Canciones</string>
+    <string name="tab_albums">Álbumes</string>
+    <string name="tab_artists">Artistas</string>
+    <string name="tab_folders">Carpetas</string>
+    <string name="tab_playlists">Playlists</string>
+    <string name="tab_favorites">Favoritos</string>
+    <string name="tab_videos">Vídeos</string>
+    <string name="filter_all">Todo</string>
+
+    <!-- Sorting & Views -->
+    <string name="sort_by">Ordenar por</string>
+    <string name="sort_name">Nombre</string>
+    <string name="sort_artist">Artista</string>
+    <string name="sort_album">Álbum</string>
+    <string name="sort_date_added">Fecha de adición</string>
+    <string name="sort_duration">Duración</string>
+    <string name="view_list">Vista de lista</string>
+    <string name="view_grid">Vista de cuadrícula</string>
+
+    <!-- Search -->
+    <string name="search_title">Buscar</string>
+    <string name="search_placeholder">Títulos, artistas, álbumes, carpetas, playlists…</string>
+    <string name="search_empty_title">Sin coincidencias locales</string>
+    <string name="search_empty_body">Prueba otra palabra o quita el filtro de categoría.</string>
+    <string name="search_idle_title">Búsqueda local instantánea</string>
+    <string name="search_idle_body">Encuentra canciones, álbumes, artistas, carpetas, playlists y vídeos en tu dispositivo.</string>
+
+    <!-- Library & Playlists -->
+    <string name="library_title">Mi Biblioteca</string>
+    <string name="create_playlist">Crear Nueva Playlist</string>
+    <string name="create_playlist_subtitle">Crea tu propia colección offline</string>
+    <string name="playlist_name_hint">Nombre de la playlist</string>
+    <string name="rename_playlist">Renombrar playlist</string>
+    <string name="delete_playlist">Eliminar playlist</string>
+    <string name="delete_playlist_confirm">¿Eliminar la playlist \"%1$s\"? Tus archivos originales no se borrarán.</string>
+    <string name="songs_count">%1$d canciones</string>
+    <string name="items_count">%1$d elementos</string>
+    <string name="add_to_playlist">Añadir a playlist</string>
+    <string name="remove_from_playlist">Quitar de playlist</string>
+    <string name="no_playlists_title">Aún no hay playlists</string>
+    <string name="no_playlists_body">Crea una playlist o guarda tu cola de reproducción actual.</string>
+    <string name="empty_category_title">Nada por aquí todavía</string>
+    <string name="empty_category_body">Importa archivos locales o marca favoritos para llenar esta sección.</string>
+    <string name="unavailable_badge">No disponible</string>
+    <string name="remove_from_library">Quitar de la biblioteca</string>
+    <string name="remove_item_confirm">¿Quitar \"%1$s\" de la biblioteca? El archivo en el dispositivo no se eliminará.</string>
+
+    <!-- Player & Controls -->
+    <string name="now_playing">Reproduciendo</string>
+    <string name="unknown_artist">Artista Desconocido</string>
+    <string name="unknown_album">Álbum Desconocido</string>
+    <string name="play">Reproducir</string>
+    <string name="pause">Pausar</string>
+    <string name="previous">Anterior</string>
+    <string name="next">Siguiente</string>
+    <string name="shuffle">Aleatorio</string>
+    <string name="repeat_off">Repetición desactivada</string>
+    <string name="repeat_all">Repetir todo</string>
+    <string name="repeat_one">Repetir una</string>
+    <string name="favorite">Favorito</string>
+    <string name="queue">Cola</string>
+    <string name="equalizer">Ecualizador</string>
+    <string name="sleep_timer">Temporizador</string>
+    <string name="playback_speed">Velocidad</string>
+    <string name="lyrics">Letras</string>
+    <string name="track_details">Formato y Detalles</string>
+    <string name="minimalist_mode">Modo minimalista</string>
+    <string name="play_next">Reproducir siguiente</string>
+    <string name="add_to_queue">Añadir a la cola</string>
+    <string name="dismiss_mini_player">Ocultar mini-reproductor</string>
+    <string name="set_mood">Asignar ambiente</string>
+
+    <!-- Queue -->
+    <string name="queue_title">Cola de Reproducción</string>
+    <string name="queue_now_playing">Reproduciendo ahora</string>
+    <string name="queue_up_next">A continuación</string>
+    <string name="queue_empty">La cola de reproducción está vacía.</string>
+    <string name="clear_queue">Vaciar cola</string>
+    <string name="clear_queue_confirm">¿Eliminar todas las pistas siguientes de la cola?</string>
+    <string name="save_queue_as_playlist">Guardar como playlist</string>
+    <string name="move_up">Subir</string>
+    <string name="move_down">Bajar</string>
+
+    <!-- Equalizer & Audio Effects -->
+    <string name="eq_title">Ecualizador de Audio</string>
+    <string name="eq_enabled">Activar Ecualizador</string>
+    <string name="eq_unavailable">El ecualizador de hardware no está disponible en esta sesión de audio.</string>
+    <string name="eq_preset">Preajuste</string>
+    <string name="eq_preset_custom">Personalizado</string>
+    <string name="eq_loudness_norm">Normalización de Volumen</string>
+    <string name="eq_loudness_desc">Equilibra el volumen percibido entre pistas mediante Android LoudnessEnhancer.</string>
+
+    <!-- Sleep Timer -->
+    <string name="sleep_timer_off">Desactivado</string>
+    <string name="sleep_timer_end_of_track">Al terminar la pista actual</string>
+    <string name="sleep_timer_minutes">%1$d minutos</string>
+    <string name="sleep_timer_active">Se detiene en %1$s</string>
+    <string name="sleep_timer_active_end">Se detiene tras la pista actual</string>
+
+    <!-- Lyrics & Track Info -->
+    <string name="lyrics_unavailable">No se encontraron letras incrustadas en este archivo. Nunca se inventan letras offline.</string>
+    <string name="format_label">Contenedor / Formato</string>
+    <string name="mime_type_label">Tipo MIME</string>
+    <string name="bitrate_label">Tasa de bits</string>
+    <string name="sample_rate_label">Frecuencia</string>
+    <string name="resolution_label">Resolución</string>
+    <string name="duration_label">Duración</string>
+    <string name="folder_label">Carpeta</string>
+    <string name="size_label">Tamaño</string>
+
+    <!-- Video Player -->
+    <string name="video_library_title">Vídeos</string>
+    <string name="video_lock_controls">Bloquear controles</string>
+    <string name="video_unlock_controls">Controles bloqueados. Toca para desbloquear</string>
+    <string name="video_aspect_fit">Ajustar</string>
+    <string name="video_aspect_fill">Rellenar</string>
+    <string name="video_aspect_zoom">Zoom</string>
+    <string name="video_tracks">Audio y Subtítulos</string>
+    <string name="video_audio_tracks">Pistas de Audio</string>
+    <string name="video_subtitle_tracks">Subtítulos</string>
+    <string name="video_subtitles_off">Desactivado</string>
+    <string name="video_no_alt_tracks">Solo la pista principal está presente en este vídeo.</string>
+    <string name="video_brightness">Brillo</string>
+    <string name="video_volume">Volumen</string>
+    <string name="video_rotate">Orientación</string>
+    <string name="video_resume_badge">Reanudar %1$s</string>
+
+    <!-- History & Stats -->
+    <string name="history_title">Historial y Estadísticas</string>
+    <string name="stats_listening_time">Tiempo de escucha</string>
+    <string name="stats_total_plays">Reproducciones</string>
+    <string name="stats_most_played">Más reproducidas</string>
+    <string name="stats_reset">Reiniciar estadísticas</string>
+    <string name="stats_reset_confirm">¿Reiniciar todos los conteos locales y tiempo de escucha?</string>
+    <string name="history_clear_all">Borrar historial</string>
+    <string name="history_clear_confirm">¿Borrar todo tu historial local de reproducción?</string>
+    <string name="history_empty_title">Aún sin historial</string>
+    <string name="history_empty_body">Las canciones y vídeos que reproduzcas aparecerán aquí.</string>
+
+    <!-- Settings & Profile -->
+    <string name="settings_title">Perfil y Ajustes</string>
+    <string name="section_appearance">Apariencia y Liquid Glass</string>
+    <string name="setting_theme">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="setting_accent">Color de Acento</string>
+    <string name="accent_blue">Azul Líquido</string>
+    <string name="accent_violet">Violeta Eléctrico</string>
+    <string name="accent_cyan">Cian Niebla</string>
+    <string name="accent_coral">Coral Dorado</string>
+    <string name="accent_emerald">Esmeralda</string>
+    <string name="setting_glass_quality">Efecto Liquid Glass</string>
+    <string name="glass_high">Alto (Desenfoque + Brillo)</string>
+    <string name="glass_balanced">Equilibrado</string>
+    <string name="glass_reduced">Ligero / Alto Contraste</string>
+    <string name="setting_language">Idioma</string>
+    <string name="lang_system">Predeterminado del Sistema</string>
+    <string name="lang_pt">Português</string>
+    <string name="lang_en">English</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_fr">Français</string>
+
+    <string name="section_motion">Animaciones y Accesibilidad</string>
+    <string name="setting_reduce_motion">Reducir Movimiento</string>
+    <string name="setting_album_rotation">Rotar Carátula al Reproducir</string>
+    <string name="setting_visualizer">Visualizador de Onda de Audio</string>
+    <string name="setting_dynamic_gradient">Degradado Dinámico de Carátula</string>
+    <string name="setting_haptics">Respuesta Háptica</string>
+    <string name="setting_swipe_gestures">Deslizar Carátula para Saltar</string>
+
+    <string name="section_playback">Preferencias de Reproducción</string>
+    <string name="setting_crossfade">Transición Suave (Crossfade)</string>
+    <string name="setting_crossfade_duration">Duración del Crossfade: %1$ds</string>
+    <string name="setting_resume_session">Reanudar Última Sesión al Abrir</string>
+    <string name="setting_minimalist_default">Iniciar en Modo Minimalista</string>
+
+    <string name="section_offline_sync">Biblioteca y Sincronización Offline</string>
+    <string name="sync_status_never">Aún no sincronizado</string>
+    <string name="sync_status_synced">Última sincronización: %1$s (%2$d elementos)</string>
+    <string name="sync_status_syncing">Sincronizando biblioteca offline…</string>
+    <string name="synced_folders_count">%1$d carpetas vinculadas offline</string>
+    <string name="export_backup">Exportar Copia Offline (.json)</string>
+    <string name="import_backup">Restaurar Copia Offline (.json)</string>
+    <string name="backup_exported">Copia offline exportada (%1$d pistas, %2$d playlists).</string>
+    <string name="backup_imported">Copia offline restaurada (%1$d playlists sincronizadas).</string>
+
+    <string name="section_device_codecs">Formatos Compatibles y Privacidad</string>
+    <string name="device_codecs_button">Inspeccionar Decodificadores</string>
+    <string name="device_codecs_title">Códecs de Audio y Vídeo Compatibles</string>
+    <string name="device_codecs_subtitle">Detectados en directo desde el hardware y motor Media3 del dispositivo.</string>
+    <string name="privacy_note_title">Privacidad 100% Offline</string>
+    <string name="privacy_note_body">Todos los archivos permanecen en el dispositivo mediante URIs persistentes de Storage Access Framework. No se envía nada a servidores.</string>
+    <string name="about_title">Acerca de Luma Player</string>
+    <string name="about_body">Versión %1$s • Kotlin Nativo, Jetpack Compose, Room y AndroidX Media3.</string>
+
+    <!-- Errors & Dialogs -->
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="create">Crear</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
+    <string name="close">Cerrar</string>
+    <string name="error_file_unavailable">El archivo no está disponible o fue movido del dispositivo.</string>
+    <string name="error_unsupported_format">Formato o códec no compatible/dañado (%1$s).</string>
+    <string name="error_playback_generic">No se pudo reproducir \"%1$s\": %2$s</string>
+    <string name="import_result_message">Importados %1$d nuevos elementos (%2$d duplicados omitidos).</string>
+    <string name="sync_result_message">Sincronización offline completa: %1$d nuevos, %2$d no disponibles.</string>
+    <string name="notif_permission_rationale">El permiso de notificaciones permite mostrar controles en pantalla bloqueada y segundo plano.</string>
+    <string name="allow">Permitir</string>
+</resources>
