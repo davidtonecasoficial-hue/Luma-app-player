@@ -10,8 +10,10 @@ import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
 import com.example.MainActivity
 import com.example.data.local.PreferencesRepository
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.first
@@ -20,7 +22,8 @@ import kotlinx.coroutines.launch
 class PlaybackService : MediaSessionService() {
 
     private var mediaSession: MediaSession? = null
-    private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
+    private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+    private var audioEffectsJob: Job? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -51,28 +54,39 @@ class PlaybackService : MediaSessionService() {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        mediaSession = MediaSession.Builder(this, player)
-            .setSessionActivity(pendingIntent)
-            .build()
+        try {
+            mediaSession = MediaSession.Builder(this, player)
+                .setSessionActivity(pendingIntent)
+                .build()
+        } catch (error: Throwable) {
+            // Do not leak the player if session initialization fails.
+            player.release()
+            throw error
+        }
     }
 
     private fun attachSavedAudioEffects(audioSessionId: Int) {
         if (audioSessionId == C.AUDIO_SESSION_ID_UNSET || audioSessionId <= 0) return
-        serviceScope.launch {
-            val prefs = PreferencesRepository(applicationContext).preferencesFlow.first()
-            AudioEffectsManager.attachToAudioSession(
-                audioSessionId = audioSessionId,
-                eqEnabled = prefs.equalizerEnabled,
-                presetIndex = prefs.equalizerPresetIndex,
-                savedBandLevels = prefs.equalizerBandLevels,
-                loudnessEnabled = prefs.loudnessNormalizationEnabled
-            )
+        audioEffectsJob?.cancel()
+        audioEffectsJob = serviceScope.launch {
+            try {
+                val prefs = PreferencesRepository(applicationContext).preferencesFlow.first()
+                AudioEffectsManager.attachToAudioSession(
+                    audioSessionId = audioSessionId,
+                    eqEnabled = prefs.equalizerEnabled,
+                    presetIndex = prefs.equalizerPresetIndex,
+                    savedBandLevels = prefs.equalizerBandLevels,
+                    loudnessEnabled = prefs.loudnessNormalizationEnabled
+                )
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (_: Exception) {
+                // Audio effects are optional. A device/API failure must not take down playback.
+            }
         }
     }
 
-    override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? {
-        return mediaSession
-    }
+    override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? = mediaSession
 
     override fun onTaskRemoved(rootIntent: Intent?) {
         val player = mediaSession?.player
@@ -82,11 +96,19 @@ class PlaybackService : MediaSessionService() {
     }
 
     override fun onDestroy() {
-        AudioEffectsManager.releaseEffects()
-        mediaSession?.run {
-            player.release()
-            release()
+        audioEffectsJob?.cancel()
+        try {
+            AudioEffectsManager.releaseEffects()
+        } catch (_: RuntimeException) {
+            // Effect implementations are device-dependent and must not prevent service teardown.
+        }
+        mediaSession?.let { session ->
             mediaSession = null
+            try {
+                session.player.release()
+            } finally {
+                session.release()
+            }
         }
         serviceScope.cancel()
         super.onDestroy()
